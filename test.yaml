@@ -1,0 +1,9 @@
+value1: first value
+value2: second value
+stages:
+  - name: first
+    firstString: first string
+    firstInt: 1
+  - name: second
+    secondString: second string
+    secondInt: 12
