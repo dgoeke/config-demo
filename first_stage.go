@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/dgoeke/config-demo/pkg/config"
+	"github.com/dgoeke/config-demo/pkg/stages"
 	"github.com/mitchellh/multistep"
 )
 
@@ -28,10 +28,10 @@ func (fs *FirstStage) Validate() error {
 	return nil
 }
 
-func createFirst() config.Stage {
+func createFirst() stages.Stage {
 	return &FirstStage{}
 }
 
 func init() {
-	config.MustRegisterStage("first", createFirst)
+	stages.MustRegister("first", createFirst)
 }
